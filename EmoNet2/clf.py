@@ -5,12 +5,11 @@ from PIL import Image
 def predict(image_path):
     
     device = torch.device('cpu')
-    resnet = torch.load('mnot_1_68.pth', map_location = device)
+    resnet = torch.load('mnet.pth', map_location = device)
 
     #https://pytorch.org/docs/stable/torchvision/models.html
     transform = transforms.Compose([
-    transforms.Resize(224),
-    transforms.CenterCrop(120),
+    
     transforms.ToTensor(),
     transforms.Normalize(
     mean=[0.4681, 0.4030, 0.5275] , std =[1.5016, 1.5685, 1.5956])])

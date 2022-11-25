@@ -5,7 +5,7 @@ from PIL import Image
 def predict(image_path):
     
     device = torch.device('cpu')
-    resnet = torch.load('C:\Users\Haneesh\OneDrive\Desktop\EmoNet2\mnet.pth', map_location = device)
+    resnet = torch.load(r'C:\Users\Haneesh\OneDrive\Desktop\EmoNet2\mnet.pth', map_location = device)
 
     #https://pytorch.org/docs/stable/torchvision/models.html
     transform = transforms.Compose([

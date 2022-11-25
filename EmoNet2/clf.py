@@ -12,7 +12,7 @@ def predict(image_path):
     
     transforms.ToTensor(),
     transforms.Normalize(
-    mean=[0.4681, 0.4030, 0.5275] , std =[1.5016, 1.5685, 1.5956])])
+    mean=[0.4681, 0.403, 0.5275] , std =[1.5016, 1.5685, 1.5956])])
 
     img = Image.open(image_path)
     batch_t = torch.unsqueeze(transform(img), 0)

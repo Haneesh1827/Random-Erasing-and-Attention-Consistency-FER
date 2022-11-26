@@ -4,6 +4,9 @@ from PIL import Image
 
 def predict(image_path):
     
+    with open('remonet_classes.txt') as f:
+        classes = [line.strip() for line in f.readlines()]
+        
     device = torch.device('cpu')
     resnet = torch.load('mnet.pth', map_location = device)
 
@@ -19,9 +22,6 @@ def predict(image_path):
 
     resnet.eval()
     out = resnet(batch_t)
-
-    with open('remonet_classes.txt') as f:
-        classes = [line.strip() for line in f.readlines()]
 
     prob = torch.nn.functional.softmax(out, dim=1)[0] * 100
     _, indices = torch.sort(out, descending=True)

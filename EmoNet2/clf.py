@@ -4,7 +4,7 @@ from PIL import Image
 
 def predict(image_path):
     
-    with open('haneesh1827/emotion-detector/main/EmoNet2/remonet_classes.txt') as f:
+    with open('haneesh1827/emotion-detector/EmoNet2/remonet_classes.txt') as f:
         classes = [line.strip() for line in f.readlines()]
         
     device = torch.device('cpu')

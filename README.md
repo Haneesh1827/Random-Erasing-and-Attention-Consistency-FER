@@ -5,6 +5,8 @@
 
 ## Visual Attention Consistency
 
+The attention regions in classification of a image follows the same transform as that of as spatial transforamtion of the image. 
+
 ![Attentionconsitency](https://github.com/Haneesh1827/Random-Erasing-and-Attention-Consistency-FER/assets/85379299/98991981-d5df-4e4e-947c-8b72cd783028)
 
 ## The Framework
